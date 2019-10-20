@@ -104,10 +104,10 @@
       </div>
       <div class="item_clean">С</div>
       <div class="item_back">&larr;</div><!-- знак стрелки или отката назад-->
-      <div class="item_1">+</div>
-      <div class="item_2">-</div>
-      <div class="item_3">&times;</div><!-- знак умножения (х)-->
-      <div class="item_4">&divide;</div><!-- знак деления-->
+      <div class="item_1" onclick="insert('+')">+</div>
+      <div class="item_2" onclick="insert('-')">-</div>
+      <div class="item_3" onclick="insert('*')">&times;</div><!-- знак умножения (х)-->
+      <div class="item_4" onclick="insert('/')">&divide;</div><!-- знак деления-->
       <div class="item_5">7</div>
       <div class="item_6">8</div>
       <div class="item_7">9</div>
@@ -124,8 +124,8 @@
       <div class="item_16">.</div>
   </div>
   <script type="text/javascript">
-    function insert(num) {
-      
+    function insert(num) {//Аргумент num мы будем добавлять в item_input 
+    	document.form.textview.value = document.form.textview.value + num;
     }
   </script>
 </body>
